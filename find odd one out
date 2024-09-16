@@ -1,0 +1,27 @@
+#include <iostream>
+#include<map>
+using namespace std;
+int main() {
+    // Write C++ code here
+int n;
+cin>>n;
+int a[n],i;
+map<int,int>mp;
+for(i=0;i<n;i++){
+    cin>>a[i];
+    mp[a[i]]++;
+}
+for(auto it:mp){
+    if(it.second%2==1)
+    {
+        cout<<it.first;
+        break;
+    }
+}
+
+    return 0;
+}
+output
+7
+9 9 3 4 2 3 2
+4
