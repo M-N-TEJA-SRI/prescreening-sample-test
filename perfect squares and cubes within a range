@@ -1,0 +1,43 @@
+#include <iostream>
+#include<cmath>
+#include<vector>
+using namespace std;
+int main() {
+    // Write C++ code here
+vector<int>s,c;
+int a,b,x,y,z,d,i;
+cin>>a>>b;
+x=sqrt(a);
+y=sqrt(b);
+z=cbrt(a);
+d=cbrt(b);
+
+for(i=x;i<=y;i++){
+    if(i*i>=a&&i*i<=b){
+        s.push_back(i*i);
+     
+    }
+}
+for(i=z;i<=d;i++){
+    if(i*i*i>=a&&i*i*i<=b){
+        c.push_back(i*i*i);
+    
+    }
+}
+if(s.size()==0)
+s.push_back(-1);
+if(c.size()==0)
+c.push_back(-1);
+for(auto it:s){
+    cout<<it<<" ";
+}
+cout<<endl;
+for(auto it:c){
+    cout<<it<<" ";
+}
+    return 0;
+}
+output
+90 100
+100 
+-1 
