@@ -1,0 +1,29 @@
+the scores of dhoni and virat is given in the form of two strings . The person with max sixes would win . If there is a tie then print "Tie".
+#include <iostream>
+#include<map>
+using namespace std;
+int main() {
+    // Write C++ code here
+string s,t;
+cin>>s>>t;
+int dhoni=0,virat=0,i;
+for(i=0;i<s.length();i++){
+    if(s[i]=='6')
+    dhoni++;
+}
+for(i=0;i<t.length();i++){
+    if(t[i]=='6')
+    virat++;
+}
+if(dhoni>virat)
+cout<<"Dhoni";
+else if(dhoni<virat)
+cout<<"Virat";
+else
+cout<<"Tie";
+    return 0;
+}
+output
+12662
+21464
+Dhoni
