@@ -1,0 +1,43 @@
+Two numbers are given print A if a has more number of factors then B .print B if b has more factors than a .else print tie
+only 4 testcases with 14 points each got solved but remaining testcases resulted in TLE. 56/100
+Testcases which were passed were 1,2,3,7 test cases which failed was 4,5,6
+def isprime(x):
+    if(x==1):
+        return "one"
+    else:
+        
+        for i in range(2,int(x**0.5)+1):
+            if(x%i==0):
+               flag=0
+               return "comp"
+               
+        return "prime" 
+def factors(x):
+    c=2
+    for i in range(2,x):
+        if(x%i==0):
+            c+=1
+    return c        
+a,b=map(int,input().split())
+x=isprime(a)
+y=isprime(b)
+if((x=="one" and y=="one")or(x=="prime" and y=="prime")):
+    print("Tie")
+elif((x=="one" and y=="prime") or(x=="prime" and y=="comp")):
+    print('B')
+elif((x=="prime" and y=='one')or(x=="comp" and y=="prime")):
+    print('A')
+elif(x=="comp" and y=="comp"):
+    if(factors(a)>factors(b)):
+        print('A')
+    elif(factors(a)<factors(b)):
+        print('B')
+    else:
+        print('Tie')
+output
+5 10
+B
+2 1
+A
+1 1
+Tie
